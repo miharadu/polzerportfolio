@@ -338,7 +338,7 @@ function App() {
                     }
                   >
                     <span className="codeDirectionReversed">
-                      liamtoh@rezlop.ppilihp
+                      .liamtoh@rezlop.ppilihp
                     </span>
                     <span className="hideThisText">[REMOVETHIS]</span>com
                   </a>
@@ -349,14 +349,19 @@ function App() {
                   <PhoneIcon />
                 </span>
                 <span>
-                  <span className="codeDirectionReversed">7465 302 (932)</span>
+                  <span className="codeDirectionReversed">
+                    7465 <span className="hideThisText">[REMOVETHIS]</span> 302
+                    (932)
+                  </span>
                 </span>
               </li>
               <li className="contact">
                 <span>
                   <LinkedInIcon />
                 </span>
-                <span>E-Mail</span>
+                <a href="https://www.linkedin.com/in/philipp-polzer/">
+                  linkedin.com/in/philipp-polzer/
+                </a>
               </li>
               <li className="contact">
                 <span>
