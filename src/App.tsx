@@ -131,50 +131,59 @@ function App() {
               environments.
             </p>
             <h2> SKILLS </h2>
-            <ul className="noPaddingSkills">
-              <li className="resumeElemSkills">
-                <span>Networking</span>
-                <span>
+            <ul>
+              <li className="resumeElem">
+                <span className="hideThisText">HideThisText</span>
+                <span className="resumeElemSkillsCorrection">Networking</span>
+                <span className="resumeElemSkillsCorrection2">
                   Cisco IOS<br></br>Working with various switches<br></br>
                   Routers
                   <br></br>Servers, firewalls (Sonicwall, Ubiquity)<br></br>
                   Configuring networks and networking devices
                 </span>
               </li>
-              <li className="resumeElemSkills">
-                <span>Applications</span>
-                <span>
+              <li className="resumeElem">
+                <span className="hideThisText">HideThisText</span>
+                <span className="resumeElemSkillsCorrection">Applications</span>
+                <span className="resumeElemSkillsCorrection2">
                   Asterisk PBX<br></br>Active Directory<br></br>VMware<br></br>
                   Apache Web Server<br></br>
                   IntelliJ IDEA<br></br>FTP clients<br></br>Citrix<br></br>CRM
                   <br></br>CMS<br></br>Office365
                 </span>
               </li>
-              <li className="resumeElemSkills">
-                <span>Programming</span>
-                <span>
+              <li className="resumeElem">
+                <span className="hideThisText">HideThisText</span>
+                <span className="resumeElemSkillsCorrection">Programming</span>
+                <span className="resumeElemSkillsCorrection2">
                   Java<br></br>C++<br></br>HTML/CSS<br></br>JavaScript<br></br>
                   Bash
                   <br></br>Python
                 </span>
               </li>
-              <li className="resumeElemSkills">
-                <span>Operating Systems</span>
-                <span>
+              <li className="resumeElem">
+                <span className="hideThisText">HideThisText</span>
+                <span className="resumeElemSkillsCorrection">
+                  Operating Systems
+                </span>
+                <span className="resumeElemSkillsCorrection2">
                   Windows (7, 8, 10, 11)<br></br>Linux<br></br>Windows Server
                 </span>
               </li>
-
-              <li className="resumeElemSkills">
-                <span>Customer Service</span>
-                <span>
+              <li className="resumeElem">
+                <span className="hideThisText">HideThisText</span>
+                <span className="resumeElemSkillsCorrection">
+                  Customer Service
+                </span>
+                <span className="resumeElemSkillsCorrection2">
                   4+ years' experience using phone, mail and face-to-face
                   communication to troubleshoot technical issues
                 </span>
               </li>
-              <li className="resumeElemSkills">
-                <span>Languages</span>
-                <span>
+              <li className="resumeElem">
+                <span className="hideThisText">HideThisText</span>
+                <span className="resumeElemSkillsCorrection">Languages</span>
+                <span className="resumeElemSkillsCorrection2">
                   English (fluent)<br></br>German (fluent)<br></br>Spanish (very
                   good command)
                 </span>
@@ -182,7 +191,7 @@ function App() {
             </ul>
 
             {/* ///////// */}
-            <h2> EXPERIENCE </h2>
+            <h2 className="h2LessMargin"> EXPERIENCE </h2>
             <ul>
               <li className="resumeElem">
                 <span>
@@ -338,10 +347,10 @@ function App() {
               </li>
             </ul>
             {/* /////// */}
-            <h2> EDUCATION </h2>
+            <h2 className="h2LessMargin"> EDUCATION </h2>
             <ul>
               <li className="resumeElem">
-                <span>
+                <span className="educationPadding">
                   Ongoing <br></br> (from 2020)
                 </span>
                 <span>
@@ -349,7 +358,7 @@ function App() {
                 </span>
               </li>
               <li className="resumeElem">
-                <span>2011</span>
+                <span className="educationPadding">2011</span>
                 <span>
                   HIGH SCHOOL DIPLOMA <br></br>Derby High School<br></br>{" "}
                   (Derby, KS)
@@ -373,14 +382,15 @@ function App() {
                 </span>
                 <span>
                   <a
+                    className="email"
                     href={
                       "mai" + atob("bHRvOnBoaWxpcHAucG9semVyQGhvdG1haWwuY29t")
                     }
                   >
                     <span className="codeDirectionReversed">
-                      .liamtoh@rezlop.ppilihp
+                      rezlop.ppilihp
                     </span>
-                    <span className="hideThisText">[REMOVETHIS]</span>com
+                    <span className="codeDirectionReversed">moc.liamtoh@</span>
                   </a>
                 </span>
               </li>

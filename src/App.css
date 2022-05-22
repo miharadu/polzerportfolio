@@ -10,7 +10,7 @@ h1 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 33px;
   letter-spacing: 1.1px;
   padding: 60px 0 50px 0;
   text-transform: uppercase;
@@ -18,6 +18,7 @@ h2 {
 
 ul {
   list-style-type: none;
+  padding: 0 0;
 }
 
 p {
@@ -36,15 +37,9 @@ a {
 
 .menuItemList {
   display: flex;
-  /* flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
-  /* width: 100%; */
-  /* margin-bottom: -250px; */
   padding: 0.5em 0;
   list-style: none;
   flex-direction: column;
-  /* margin-top: 100px; */
   position: fixed;
   top: 100px;
   right: 70px;
@@ -57,10 +52,10 @@ a {
   background: var(--black);
   color: var(--white);
   padding: 1em 0.5em;
-  /* position: relative; */
   border: 1px solid var(--green);
   margin: 0 0.1em;
-  /* transition: border-bottom .23s ease-in-out, background .23s linear; */
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
   cursor: pointer;
   min-width: 8em;
   text-align: center;
@@ -129,17 +124,6 @@ a {
   font-size: 35px;
 }
 
-/* @media screen and (min-width: 900px) {
-  .name {
-    font-size: 50px;
-    gap: 5px;
-  }
-
-  .name span {
-    font-size: 58px;
-  }
-} */
-
 @media screen and (min-width: 910px) {
   .name {
     flex-direction: row;
@@ -158,7 +142,6 @@ a {
 }
 
 .menuItem {
-  /* display: inline-block; todo*/
   display: none;
   text-transform: uppercase;
   -webkit-transition: all 0.35s ease;
@@ -200,7 +183,6 @@ a {
 
   .menuItemActive {
     display: inline-block;
-    /* display: none; */
     opacity: 1;
   }
 
@@ -244,19 +226,6 @@ a {
   width: 100%;
 }
 
-/* .footer {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 0;
-  background-color: red; 
-  letter-spacing: 1.1px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 20px;
-} */
-
 .mainContainer {
   display: block;
   padding: 30vh 0;
@@ -264,61 +233,92 @@ a {
 
 .resumeElem {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  /* height: 150px; */
-  padding: 30px 0;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0px 0;
 }
 
 .resumeElem :nth-child(1) {
   opacity: 0.7;
   font-size: 16px;
-  position: absolute;
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  height: 25px;
-  width: 150px;
-  text-align: right;
-  margin-top: 140px;
-  margin-left: -30px;
+  order: 1;
+  order: 1;
 }
 
 .resumeElem :nth-child(2) {
-  min-height: 150px;
   flex: 1;
-  padding-left: 15px;
+  order: 0;
 }
 
 .resumeElem :nth-child(3) {
   opacity: 0.7;
   /* for min-height check width first child */
-  min-height: 150px;
-  flex: 3;
-}
-.noPaddingSkills {
-  padding: 0;
-}
-.resumeElemSkills {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  /* height: 150px; */
-  padding: 30px 0;
+  order: 3;
+  margin-bottom: 100px;
 }
 
-.resumeElemSkills :nth-child(1) {
-  /* min-height: 80px; */
-  flex: 1 + 60px;
+@media screen and (min-width: 800px) {
+  ul {
+    padding: 0 40px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  .resumeElem {
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .resumeElem :nth-child(1) {
+    opacity: 0.7;
+    font-size: 16px;
+    position: absolute;
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    height: 25px;
+    width: 150px;
+    text-align: right;
+    margin-top: 140px;
+    margin-left: -30px;
+    order: 0;
+  }
+
+  .resumeElem :nth-child(2) {
+    min-height: 150px;
+    flex: 1;
+    padding-left: 15px;
+    order: 1;
+  }
+
+  .resumeElemSkillsCorrection {
+    margin-left: -55px;
+  }
+
+  .resumeElem :nth-child(3) {
+    /* for min-height check width first child */
+    min-height: 150px;
+    flex: 3;
+    margin-bottom: 0;
+  }
+
+  .resumeElemSkillsCorrection2 {
+    margin-left: 60px;
+  }
 }
 
-.resumeElemSkills :nth-child(2) {
-  opacity: 0.5;
-  /* font-size: 15px; */
-  /* for min-height check width first child */
-  /* min-height: 80px; */
-  flex: 3;
+@media screen and (max-width: 800px) {
+  .educationPadding {
+    padding-bottom: 80px;
+  }
+
+  .h2LessMargin {
+    margin-top: -90px;
+  }
 }
 
 .contact {
@@ -326,6 +326,7 @@ a {
   flex-direction: row;
   gap: 30px;
   padding: 30px 0 0 0;
+  word-break: break-all;
 }
 
 .hideThisText {
@@ -335,6 +336,17 @@ a {
 .codeDirectionReversed {
   unicode-bidi: bidi-override;
   direction: rtl;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 500px) {
+  .email {
+    flex-direction: row;
+  }
 }
 
 /* .App {
