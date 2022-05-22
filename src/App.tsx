@@ -4,6 +4,7 @@ import { ReactComponent as MapIcon } from "./location.svg";
 import { ReactComponent as MailIcon } from "./mail.svg";
 import { ReactComponent as LinkedInIcon } from "./linkedin.svg";
 import { ReactComponent as PhoneIcon } from "./phone.svg";
+import { ReactComponent as MenuIcon } from "./menu.svg";
 
 import "./App.css";
 
@@ -17,6 +18,8 @@ function App() {
   const [menuItemVisible, setMenuItemVisible] = React.useState<menuItem>(
     menuItem.experienceVisible
   );
+
+  const [menuOpen, setMenuOpen] = React.useState<boolean>(false);
 
   const showSection = (section: string) => {
     if (section === "experience") {
@@ -37,6 +40,9 @@ function App() {
           <span>Polzer</span>
         </div>
         <nav className="menu">
+          <div className="menuIcon" onClick={() => setMenuOpen(!menuOpen)}>
+            <MenuIcon />
+          </div>
           <div
             className={
               menuItemVisible === menuItem.experienceVisible
@@ -69,6 +75,40 @@ function App() {
           </div>
         </nav>
       </div>
+      {menuOpen && (
+        <ol className="menuItemList">
+          <li
+            className={
+              menuItemVisible === menuItem.experienceVisible
+                ? "menuItemListItem menuItemListItemActive"
+                : "menuItemListItem"
+            }
+            onClick={() => showSection("experience")}
+          >
+            Experience
+          </li>
+          <li
+            className={
+              menuItemVisible === menuItem.educationVisible
+                ? "menuItemListItem menuItemListItemActive"
+                : "menuItemListItem"
+            }
+            onClick={() => showSection("education")}
+          >
+            Education
+          </li>
+          <li
+            className={
+              menuItemVisible === menuItem.contactVisible
+                ? "menuItemListItem menuItemListItemActive"
+                : "menuItemListItem"
+            }
+            onClick={() => showSection("contact")}
+          >
+            Contact
+          </li>
+        </ol>
+      )}
 
       {/* sectionShowed */}
       <div className="mainContainer">
